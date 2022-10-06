@@ -4,4 +4,14 @@
 //? Start: method- starts the timer, can't be stopped if not stopped
 //? reset: method- takes stopwatch to inital state
 //@typescript
-
+function Stopwatch() {
+    this.duration = `Total time: ${this.stop}`
+    this.start = function() {
+        console.time("Timer");
+    }
+    this.stop = function() {
+        console.timeEnd("Timer");
+    }
+    // this.reset =
+}
+let sw1 = new Stopwatch();
