@@ -5,12 +5,15 @@
 //? reset: method- takes stopwatch to inital state
 //@typescript
 function Stopwatch() {
-    this.duration = `Total time: ${this.stop}`
+    this.duration = `Total time: ${this.stop - this.start}`;
     this.start = function() {
-        console.time("Timer");
+        const startTime = Date.now();
+        return startTime;
+        //new Date().getTime();
     }
     this.stop = function() {
-        console.timeEnd("Timer");
+        const endTime = Date.now();
+        return endTime;
     }
     // this.reset =
 }
